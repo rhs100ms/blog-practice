@@ -29,7 +29,7 @@ public class TodoController {
 
     //todo API문서를 확인하여 POST /todo REST API를 완성하세요
     //todo TodoService를 활용하세요
-    @PostMapping("/todo")
+    @PostMapping(value = "/todo")
     public ResultDto addTodo(@RequestBody Todo todoParam) {
         Todo todo = new Todo(todoParam.getContent());
         todoService.addTodo(todo);
